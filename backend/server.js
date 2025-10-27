@@ -10,7 +10,10 @@ const bookingRoutes = require('./routes/bookings');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://event-booking-1-e91q.onrender.com',
+  credentials: true, // Allow cookies, if needed
+}));
 app.use(express.json());
 
 // Routes
