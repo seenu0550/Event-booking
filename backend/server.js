@@ -20,6 +20,11 @@ app.use(cors({
 
 app.use(express.json());
 
+// Health check
+app.get('/', (req, res) => {
+  res.json({ status: 'OK', message: 'EventHub API is running' });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
