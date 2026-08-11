@@ -13,7 +13,7 @@ const app = express();
 app.use(cors({
     origin: [
         'http://localhost:3000',
-        'https://event-booking-1-ulji.onrender.com'
+        'https://event-booking-frontend-na2w.onrender.com'
     ],
     credentials: true
 }));
